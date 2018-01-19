@@ -1,5 +1,5 @@
 ---
-title: Litetokens.Github.Io
+title: Litetokens.co
 timezone: UTC
 collections:
   posts:
@@ -8,17 +8,15 @@ collections:
   uploads:
     title: Uploads
     output: true
-baseurl: ''
-url: https://czarcraft.co
+baseurl: 
+url: https://litetokens.co
 theme:
   title: Litetokens
   avatar: XLT.png
   gravatar: 
-  description: The Best Way to Trade Everything
-  header_text: "<h2>Litetokens : the best way to trade everything.</h2>\n \n<p class='lead'></p>\n"
-  footer_text: '© <a href="https://treefunder.co">Treefunder Incorporated</a>
-
-'
+  description: "## Litetokens - The Best Way to Trade Everything"
+  header_text: "## Litetokens - the best way to trade everything."
+  footer_text: "© Kedia Corporation\n"
   rss: false
   email_address: 
   behance: 
@@ -53,4 +51,4 @@ markdown: kramdown
 highlighter: pygments
 sass:
   sass_dir: _sass
-  style: :compressed
+  style: compressed
