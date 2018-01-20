@@ -55,7 +55,7 @@ Install Litetokens Dependencies:
 sudo apt-get -y install runit software-properties-common python-software-properties git-core wget cx-freeze python3 python3-setuptools python3-dev python3-pip build-essential python3-sphinx python-virtualenv libsqlite3-dev python3-apsw python3-zmq ntp ssl-cert
 {% endhighlight %}
 
-Install Payblock Dependencies:
+Install Liteblock Dependencies:
 
 {% highlight bash %}
 sudo apt-get -y install python python-dev python-setuptools python-pip python-sphinx python-zmq libzmq3 libzmq3-dev libxml2-dev libxslt-dev zlib1g-dev libimage-exiftool-perl libevent-dev cython
@@ -144,18 +144,18 @@ cd PATH/litetokensd
 
 Remember to replace PATH with the correct full path to Litetokensd installation directory.  Make executable: "chmod 750 ~/litetokens.sh"
 
-Install Payblockd:
+Install Liteblockd:
 
 {% highlight bash %}
 cd ~/
-git clone https://github.com/litetokens/payblockd.git
-cd payblockd
+git clone https://github.com/litetokens/liteblockd.git
+cd liteblockd
 sudo pip2.7 install -r pip-requirements.txt
 mkdir data
 {% endhighlight %}
 
-Configure Payblockd:
-"~/payblockd/settings.py":
+Configure Liteblockd:
+"~/liteblockd/settings.py":
 
 {% highlight bash %}
 [Default]
@@ -168,26 +168,26 @@ blockchain-service-connect=https://ltc.blockr.io
 log-file=data/debug.log
 {% endhighlight %}
 
-Create "payblock.sh":
+Create "liteblock.sh":
 
 {% highlight bash %}
 #!/bin/sh
-cd /home/ceo/payblockd
-python2.7 payblockd.py --config-file settings.py --data-dir data --litetokensd-rpc-user litetokensrpc --litetokensd-rpc-password PASSWORD --rpc-host 127.0.0.1 --rpc-port 7800 --blockchain-service-name blockr --blockchain-service-connect https://ltc.blockr.io
+cd /home/xlt/liteblockd
+python2.7 liteblockd.py --config-file settings.py --data-dir data --litetokensd-rpc-user litetokensrpc --litetokensd-rpc-password PASSWORD --rpc-host 127.0.0.1 --rpc-port 7800 --blockchain-service-name blockr --blockchain-service-connect https://ltc.blockr.io
 {% endhighlight %}
 
-Install Paywallet:
+Install Litewallet:
 
 {% highlight bash %}
 cd ~/
 git clone https://github.com/litetokens/litewallet.git
-cd paywallet
+cd litewallet
 git checkout evolve
 {% endhighlight %}
 
-Note that the paywallet repository includes the correct release of livenet.  Do not use the generated build as it will not work.  Instead, use the included build directory 'livenet' for the prebuilt distribution.
+Note that the litewallet repository includes the correct release of livenet.  Do not use the generated build as it will not work.  Instead, use the included build directory 'livenet' for the prebuilt distribution.
 
-Configure Paywallet:
+Configure Litewallet:
 Edit ~/litewallet/livenet/litewallet.conf.json and change api.litetokens.co to localhost or the desired host.
 
 {% highlight bash %}
@@ -250,6 +250,6 @@ sudo nano /etc/nginx/sites*/*
 
 This will bring up an editor to modify Nginx Site Configuration.  Please adjust settings in these files to match desired output.  In particular comment out 'etc var usr'.
 
-You may now start Litetokensd and payblockd then open a browser and begin utilizing the local instance of Litetokens.
+You may now start Litetokensd and Liteblockd then open a browser and begin utilizing the local instance of Litetokens.
 
 
