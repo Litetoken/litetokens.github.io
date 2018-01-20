@@ -38,10 +38,14 @@ sudo apt-get install libminiupnpc-dev
 Build Litecoin:
 
 {% highlight bash %}
-git clone https://github.com/litecoin-project/litecoin.git
-cd litecoin/src
-make -f makefile.unix USE_UPNP=1
-sudo cp ./litecoind /usr/bin
+- git clone https://github.com/litecoin-project/litecoin.git
+- cd litecoin/src
+- make -f makefile.unix USE_UPNP=1
+- sudo cp ./litecoind /usr/bin
+./autogen.sh
+./configure
+make
+make install # optional
 {% endhighlight %}
 
 Litecoind First Run:
