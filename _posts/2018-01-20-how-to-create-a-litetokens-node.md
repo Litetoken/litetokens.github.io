@@ -23,6 +23,7 @@ sudo apt-get install -y git autoconf autogen automake build-essential software-p
 
 Depending on Install Configuration, additional libraries may be required for Litecoin:
 
+{% highlight bash %}
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
 sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 sudo apt-get install libboost-all-dev
@@ -30,10 +31,13 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev
+{% endhighlight %}
 
 Optional Litecoin Libraries:
+{% highlight bash %}
 sudo apt-get install libminiupnpc-dev
 sudo apt-get install libminiupnpc-dev
+{% endhighlight %}
 
 Build Litecoin:
 
