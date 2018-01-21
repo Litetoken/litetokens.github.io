@@ -42,6 +42,8 @@ sudo apt-get install libminiupnpc-dev
 Build Litecoin:
 
 {% highlight bash %}
+git clone https://github.com/litecoin-project/litecoin.git
+cd litecoin
 ./autogen.sh
 ./configure
 make
