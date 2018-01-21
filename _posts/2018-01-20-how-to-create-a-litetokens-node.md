@@ -202,10 +202,15 @@ Install Litewallet:
 cd ~/
 git clone https://github.com/litetokens/litewallet.git
 cd litewallet
-git checkout evolve
+sudo npm install -g grunt grunt-cli bower
+npm install grunt --save-dev
+npm install grunt-cli --save-dev
+npm install bower --save-dev
+cd src; bower install; cd ..
+npm install
+grunt freeze
+grunt --force
 {% endhighlight %}
-
-Note that the litewallet repository includes the correct release of livenet.  Do not use the generated build as it will not work.  Instead, use the included build directory 'livenet' for the prebuilt distribution.
 
 Configure Litewallet:
 Edit ~/litewallet/livenet/litewallet.conf.json and change api.litetokens.co to localhost or the desired host.
